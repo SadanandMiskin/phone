@@ -254,7 +254,7 @@ const FeatureSection = ({ feature, index, scrollYProgress, setActiveIndex }) => 
 
   return (
     <motion.div
-      className="h-screen flex items-center justify-start pr-2 md:pr-24 lg:pr-2"
+      className="h-screen z-30  flex items-center justify-start pr-2 md:pr-24 lg:pr-2"
 
       style={{ opacity, x, scale, y:400 }}
     >
@@ -342,7 +342,7 @@ const Feature = () => {
       </div>
 
       {/* Sticky Centered Phone */}
-      <motion.div className="sticky top-1/3 -translate-y-1/3 h-screen flex justify-center items-center pointer-events-none z-10"
+      <motion.div className="sticky top-1/3 -translate-y-1/3 h-screen flex justify-center items-center pointer-events-none"
         style={{
           y: scalePh,
           rotateZ: phRotateY
