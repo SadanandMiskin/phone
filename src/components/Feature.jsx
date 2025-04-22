@@ -89,7 +89,7 @@ const PhoneScreen = ({ activeIndex }) => {
         return (
 
           <div className="bg-gradient-to-br from-zinc-900 via-gray-400 to-zinc-400 h-full w-full flex flex-col">
-              <img src="display.jpg" className="bg-contain h-full " />
+              <img src="display.webp" className="bg-contain h-full " />
             {/* <div className="text-xs text-zinc-300 mb-1">PRO DISPLAY</div> */}
             <div className="flex-1 overflow-hidden rounded-lg">
 
@@ -137,7 +137,7 @@ const PhoneScreen = ({ activeIndex }) => {
             </div>
             <div className="flex-1 bg-black/40 rounded-lg flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0">
-                <img src="s.webp"  className="bg-cover w-full h-full" />
+                <img src="s.webp"  className=" bg-cover w-full p-2 h-[88%]" />
                 {/* <motion.div
                   initial={{ scale: 1 }}
                   animate={{ scale: 1.1 }}
@@ -146,8 +146,8 @@ const PhoneScreen = ({ activeIndex }) => {
                   style={{ backgroundImage: "./s.webp" }}
                 /> */}
               </div>
-              <div className="absolute bottom-2 right-2 bg-black/60 text-zinc-200 text-xs px-2 py-1 rounded-full">
-                5.0x
+              <div className="absolute bottom-5  right-34 bg-white text-zinc-200 text-xs p-6 rounded-full">
+                {/* 5.0x */}
               </div>
               <div className="absolute top-2 left-2">
                 <div className="flex items-center bg-black/60 text-zinc-200 text-xs px-2 py-1 rounded-full">

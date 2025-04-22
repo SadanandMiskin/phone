@@ -130,8 +130,8 @@ const App = () => {
           transition={{ duration: 1.5, ease: "anticipate" }}
         >
           {/* Animated particles in background */}
-          <div className="absolute inset-0 overflow-hidden opacity-30">
-            {[...Array(30)].map((_, i) => (
+          {/* <div className="absolute inset-0 overflow-hidden opacity-30">
+            {[...Array(10)].map((_, i) => (
               <motion.div
                 key={i}
                 className="absolute w-2 h-2 rounded-full bg-white"
@@ -150,7 +150,7 @@ const App = () => {
                 }}
               />
             ))}
-          </div>
+          </div> */}
 
           {/* Glowing lines across background */}
           <motion.div
@@ -184,7 +184,7 @@ const App = () => {
               <motion.h1
                 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold bg-gradient-to-bl from-white bg-clip-text text-transparent leading-tight tracking-tight"
                 animate={{ backgroundPosition: ["0%", "100%"] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                // transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 style={{ backgroundSize: "200% 100%" }}
               >
                 It's the air you breathe.
@@ -197,7 +197,7 @@ const App = () => {
               style={{ y, opacity }}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: contentVisible ? 1 : 0, scale: contentVisible ? 1 : 0.8 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 1.8, delay: 0.5 }}
             >
               <div className="relative">
                 {/* Phone specifications display */}
@@ -244,11 +244,11 @@ const App = () => {
                   {/* Enhanced phone shadow */}
                   <motion.div
                     className="absolute bottom-0 w-40 sm:w-48 h-6 sm:h-8 bg-black/30 blur-md rounded-full mx-auto left-0 right-0 translate-y-4"
-                    animate={{
-                      width: ["40%", "45%", "40%"],
-                      opacity: [0.3, 0.4, 0.3]
-                    }}
-                    transition={{ duration: 4, repeat: Infinity }}
+                    // animate={{
+                    //   width: ["40%", "45%", "40%"],
+                    //   opacity: [0.3, 0.4, 0.3]
+                    // }}
+                    // transition={{ duration: 4, repeat: Infinity }}
                   />
 
                   {/* Enhanced Phone device - responsive sizing */}
@@ -274,17 +274,14 @@ const App = () => {
                       <div className="flex flex-col h-full pt-6 sm:pt-8 items-center">
                         <motion.div
                           className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/20 rounded-full backdrop-blur-md mb-4 sm:mb-6 flex items-center justify-center relative overflow-hidden"
-                          animate={{
-                            boxShadow: ["0 0 0px rgba(255,255,255,0.3)", "0 0 20px rgba(255,255,255,0.6)", "0 0 0px rgba(255,255,255,0.3)"]
-                          }}
-                          transition={{ duration: 3, repeat: Infinity }}
+                          // animate={{
+                          //   boxShadow: ["0 0 0px rgba(255,255,255,0.3)", "0 0 20px rgba(255,255,255,0.6)", "0 0 0px rgba(255,255,255,0.3)"]
+                          // }}
+                          // transition={{ duration: 3, repeat: Infinity }}
                         >
                           {/* Animated icon */}
                           <motion.div
-                            animate={{
-                              rotate: 360
-                            }}
-                            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+
                             className="absolute inset-0"
                           >
                             <div className="w-full h-full bg-gradient-to-tr from-white/5 to-white/30 rounded-full" />
@@ -297,8 +294,7 @@ const App = () => {
 
                         <motion.div
                           className="text-white text-base sm:text-lg md:text-xl font-semibold"
-                          animate={{ scale: [1, 1.05, 1] }}
-                          transition={{ duration: 2, repeat: Infinity }}
+
                         >
                           Experience More
                         </motion.div>
@@ -307,15 +303,11 @@ const App = () => {
                         {/* Animated progress bar */}
                         <motion.div
                           className="w-3/4 h-1 sm:h-1.5 bg-white/20 rounded-full mb-1 sm:mb-2 overflow-hidden"
-                          initial={{ width: "50%" }}
-                          animate={{ width: "75%" }}
-                          transition={{ delay: 0.8, duration: 1 }}
+
                         >
                           <motion.div
                             className="bg-white h-full rounded-full"
-                            initial={{ width: "40%" }}
-                            animate={{ width: "80%" }}
-                            transition={{ delay: 1, duration: 1.5 }}
+
                           />
                         </motion.div>
 
@@ -325,17 +317,15 @@ const App = () => {
                         </div>
 
                         {/* App shortcuts */}
-                        <div className="mt-6 sm:mt-8 grid grid-cols-4 gap-2 sm:gap-3 w-full px-3 sm:px-4">
-                          {[...Array(8)].map((_, i) => (
+                        <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-2 sm:gap-3 w-full px-3 sm:px-4">
+                          {[...Array(6)].map((_, i) => (
                             <motion.div
                               key={i}
                               className="aspect-square rounded-lg sm:rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center"
                               initial={{ opacity: 0, y: 20 }}
                               animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: 1 + i * 0.1 }}
-                              whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.2)" }}
                             >
-                              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/80"></div>
+                              {/* <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/80"></div> */}
                             </motion.div>
                           ))}
                         </div>
@@ -343,11 +333,11 @@ const App = () => {
                         {/* Bottom navigation bar */}
                         <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
                           <div className="w-full h-8 sm:h-12 bg-black/20 backdrop-blur-md rounded-full flex items-center justify-around px-2 sm:px-4">
-                            {[...Array(4)].map((_, i) => (
+                            {[...Array(3)].map((_, i) => (
                               <motion.div
                                 key={i}
                                 className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/10 flex items-center justify-center"
-                                whileHover={{ scale: 1.2, backgroundColor: "rgba(255,255,255,0.2)" }}
+
                               >
                                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-white"></div>
                               </motion.div>
@@ -355,11 +345,11 @@ const App = () => {
                           </div>
                         </div>
 
-                        <div className="mt-6 sm:mt-8 flex space-x-2">
+                        {/* <div className="mt-6 sm:mt-8 flex space-x-2">
                           <div className="h-1 w-8 sm:w-12 rounded-full bg-white/80"></div>
                           <div className="h-1 w-1.5 sm:w-2 rounded-full bg-white/30"></div>
                           <div className="h-1 w-1.5 sm:w-2 rounded-full bg-white/30"></div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
 
@@ -403,7 +393,7 @@ const App = () => {
                         <motion.div
                           className="absolute w-8 sm:w-16 h-px bg-white/30 hidden sm:block"
                           style={{
-                            left: feature.position.md.includes("right") ? "30px" : "100%",
+                            left: feature.position.md.includes("right") ? "-30px" : "100%",
                             top: "50%"
                           }}
                           initial={{ scaleX: 0 }}
@@ -434,7 +424,7 @@ const App = () => {
                 transition={{ duration: 0.5, delay: 0.8 }}
               >
                 <motion.button
-                  className="bg-gray-700/50 text-amber-300 px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-xl font-semibold text-lg sm:text-xl transition w-full sm:w-fit shadow-lg flex items-center justify-center gap-2 sm:gap-3"
+                  className="bg-white/50 text-black px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-xl font-semibold text-lg sm:text-xl transition w-full sm:w-fit shadow-lg flex items-center justify-center gap-2 sm:gap-3"
                   whileHover={{ scale: 1.05, backgroundColor: "rgb(31, 31, 31)" }}
                   whileTap={{ scale: 0.98 }}
                 >
